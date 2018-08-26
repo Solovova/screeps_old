@@ -1,0 +1,30 @@
+//1) Колонизация
+			//Старт
+			//Разведываем комнаты посредством Slaiv №13
+			//в Slaiv комнату
+			//Memory.Data['W8N3'].TypeOfRoom = 11;
+			//Memory.Data['W8N3'].NotColonise = 1;
+			
+			//Memory.Data['W3N4'].SafeWay = null;
+			//afunc.BuildSafeWay(Memory.Data['W7N4'],Memory.Data['W3N4'],'5b3e094a2a65af14a6f4b869','306d0774267ebc1')
+			//Когда построим безопастный путь
+			//Memory.Data['W8N3'].NotColonise = 0;
+
+			//Колонизировали
+			//переносим из Slaiv в Main
+			//После Memory.MainRooms  =  пишем Memory.Data['W8N3'] = new Object();
+			//Убираем Memory.Data['W8N3'].TypeOfRoom = 11;
+		//2) Запуск добычи
+			//в Slaiv комнату
+			//Memory.Data['W8N3'].TypeOfRoom = 12;
+			//Memory.Data['W8N3'].BuildRoadByCarrier = 0;
+
+//2) Бурст крипа
+
+-->modul constants
+
+        Memory.constants.Boorst[107] = new Object();
+        Memory.constants.Boorst[107].mineral  = 'GH2O'; //7 (107) - builder+upgrader
+        Memory.constants.Boorst[107].parts = WORK;
+-->тело крипа
+        if (creepfn.CreepBoorst(creep,objRoom) == 1) return;
